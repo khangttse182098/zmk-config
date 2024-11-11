@@ -41,6 +41,11 @@
             bindings = <&tog 3>;
             key-positions = <0 12 24 11 23 35>;
         };
+
+        nothing {
+            bindings = <&mo 4>;
+            key-positions = <1 13 25 10 22 34>;
+        };
     };
 
     behaviors {
@@ -122,6 +127,15 @@
         };
 
         celeste {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+                        &trans  &trans  &trans    &trans  &trans  &trans
+            >;
+        };
+
+        nothing-layer {
             bindings = <
 &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
