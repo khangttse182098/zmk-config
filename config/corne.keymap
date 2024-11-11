@@ -29,12 +29,12 @@
 
         left-control {
             bindings = <&kp LEFT_CONTROL>;
-            key-positions = <27 28>;
+            key-positions = <15 14>;
         };
 
         right-control {
             bindings = <&kp RIGHT_CONTROL>;
-            key-positions = <32 31>;
+            key-positions = <20 21>;
         };
 
         celeste-game {
@@ -49,12 +49,12 @@
 
         ctrl-shift-right {
             bindings = <&kp RS(RC(RIGHT_CONTROL))>;
-            key-positions = <8 7>;
+            key-positions = <19 21>;
         };
 
         ctrl-shift-left {
             bindings = <&kp RS(RC(RIGHT_CONTROL))>;
-            key-positions = <4 3>;
+            key-positions = <16 14>;
         };
     };
 
