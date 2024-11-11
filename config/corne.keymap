@@ -37,16 +37,6 @@
             key-positions = <20 21>;
         };
 
-        celeste-game {
-            bindings = <&tog 3>;
-            key-positions = <0 12 24 11 23 35>;
-        };
-
-        nothing {
-            bindings = <&mo 4>;
-            key-positions = <1 13 25 10 22 34>;
-        };
-
         ctrl-shift-right {
             bindings = <&kp RS(RC(RIGHT_CONTROL))>;
             key-positions = <19 21>;
@@ -98,10 +88,19 @@
         };
     };
 
+    macros {
+        double_colon_macro: double_colon_macro {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp COLON &kp COLON>;
+            label = "DOUBLE_COLON_MACRO";
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
-        default_layer {
+        characters {
             // -----------------------------------------------------------------------------------------
             // |  TAB |  Q  |  W  |  E  |  R  |  T  |   |  Y  |  U   |  I  |  O  |  P  | BSPC |
             // | CTRL |  A  |  S  |  D  |  F  |  G  |   |  H  |  J   |  K  |  L  |  ;  |  '   |
@@ -109,14 +108,14 @@
             //                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
 
             bindings = <
-&kp TAB    &kp Q  &kp W  &kp E   &kp R  &kp T    &kp Y          &kp U      &kp I      &kp O    &kp P          &kp BSPC
-&kp ESC    &kp A  &kp S  &kp D   &kp F  &kp G    &kp H          &kp J      &kp K      &kp L    &kp SEMICOLON  &kp SQT
-&kp LCTRL  &kp Z  &kp X  &kp C   &kp V  &kp B    &kp N          &kp M      &kp COMMA  &kp DOT  &kp FSLH       &kp RGUI
-                         &trans  &mo 2  &mo 1    &kp RIGHT_ALT  &kp SPACE  &kp ENTER
+&kp TAB    &kp Q  &kp W  &kp E  &kp R  &kp T    &kp Y          &kp U      &kp I      &kp O    &kp P          &kp BSPC
+&kp ESC    &kp A  &kp S  &kp D  &kp F  &kp G    &kp H          &kp J      &kp K      &kp L    &kp SEMICOLON  &kp SQT
+&kp LCTRL  &kp Z  &kp X  &kp C  &kp V  &kp B    &kp N          &kp M      &kp COMMA  &kp DOT  &kp FSLH       &kp RGUI
+                         &mo 3  &mo 2  &mo 1    &kp RIGHT_ALT  &kp SPACE  &kp ENTER
             >;
         };
 
-        lower_layer {
+        numbers {
             // -----------------------------------------------------------------------------------------
             // |  TAB |  1  |  2  |  3  |  4  |  5  |   |  6  |  7  |  8  |  9  |  0  | BSPC |
             // | BTCLR| BT1 | BT2 | BT3 | BT4 | BT5 |   | LFT | DWN |  UP | RGT |     |      |
@@ -124,14 +123,14 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-&kp TAB     &kp N1        &kp N2        &kp N3        &kp N4        &kp N5          &kp N6         &kp N7     &kp N8     &kp N9     &kp N0  &kp BSPC
-&bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4    &kp LEFT       &kp DOWN   &kp UP     &kp RIGHT  &trans  &trans
-&kp LSHFT   &trans        &trans        &trans        &trans        &trans          &trans         &trans     &trans     &trans     &trans  &trans
-                                        &trans        &trans        &trans          &kp RIGHT_ALT  &kp SPACE  &kp ENTER
+&trans      &trans        &trans        &trans        &trans        &trans          &trans         &kp N7        &kp N8        &kp N9        &kp N0  &kp BSPC
+&bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4    &trans         &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &trans  &trans
+&trans      &trans        &trans        &trans        &trans        &trans          &trans         &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &trans  &trans
+                                        &trans        &trans        &trans          &kp RIGHT_ALT  &kp SPACE     &kp ENTER
             >;
         };
 
-        raise_layer {
+        symbols {
             // -----------------------------------------------------------------------------------------
             // |  TAB |  !  |  @  |  #  |  $  |  %  |   |  ^  |  &  |  *  |  (  |  )  | BSPC |
             // | CTRL |     |     |     |     |     |   |  -  |  =  |  [  |  ]  |  \  |  `   |
@@ -139,19 +138,19 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-&kp TAB    &kp EXCL  &kp AT  &kp HASH  &kp DLLR  &kp PRCNT    &kp CARET      &kp AMPS   &kp ASTRK  &kp LPAR  &kp RPAR  &kp BSPC
-&kp LCTRL  &trans    &trans  &trans    &trans    &trans       &kp MINUS      &kp EQUAL  &kp LBKT   &kp RBKT  &kp BSLH  &kp GRAVE
-&kp LSHFT  &trans    &trans  &trans    &trans    &trans       &kp UNDER      &kp PLUS   &kp LBRC   &kp RBRC  &kp PIPE  &kp TILDE
-                             &trans    &trans    &trans       &kp RIGHT_ALT  &kp SPACE  &kp ENTER
+&kp TAB  &kp SQT          &kp LESS_THAN  &kp GREATER_THAN  &kp DOUBLE_QUOTES  &kp DOT     &kp AMPERSAND  &double_colon_macro  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp PERCENT   &kp BSPC
+&trans   &kp EXCLAMATION  &kp MINUS      &kp PLUS          &kp EQUAL          &kp HASH    &kp PIPE       &kp COLON            &kp LBKT              &kp RBKT               &kp QUESTION  &trans
+&trans   &kp CARET        &kp SLASH      &kp ASTERISK      &kp BACKSLASH      &trans      &kp TILDE      &kp DOLLAR           &kp LBRC              &kp RBRC               &kp AT_SIGN   &trans
+                                         &trans            &trans             &trans      &kp RIGHT_ALT  &kp SPACE            &kp ENTER
             >;
         };
 
-        celeste {
+        controls {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-                        &trans  &trans  &trans    &trans  &trans  &trans
+&trans  &trans  &trans     &trans     &trans     &trans    &trans          &trans    &trans        &trans           &trans  &trans
+&trans  &trans  &kp RC(X)  &kp RS(V)  &kp RC(C)  &trans    &kp LEFT_ARROW  &kp DOWN  &kp UP_ARROW  &kp RIGHT_ARROW  &trans  &trans
+&trans  &trans  &trans     &trans     &trans     &trans    &trans          &trans    &trans        &trans           &trans  &trans
+                           &trans     &trans     &trans    &trans          &trans    &trans
             >;
         };
 
