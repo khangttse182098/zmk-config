@@ -26,6 +26,21 @@
             bindings = <&kp LSHFT>;
             key-positions = <16 15>;
         };
+
+        left-control {
+            bindings = <&kp LEFT_CONTROL>;
+            key-positions = <15 14>;
+        };
+
+        right-control {
+            bindings = <&kp RIGHT_CONTROL>;
+            key-positions = <20 21>;
+        };
+
+        celeste-game {
+            bindings = <&tog 3>;
+            key-positions = <0 12 24 11 23 35>;
+        };
     };
 
     behaviors {
@@ -84,10 +99,10 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-&kp TAB     &kp N1        &kp N2        &kp N3        &kp N4          &kp N5          &kp N6    &kp N7     &kp N8     &kp N9     &kp N0  &kp BSPC
-&bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3    &bt BT_SEL 4    &kp LEFT  &kp DOWN   &kp UP     &kp RIGHT  &trans  &trans
-&kp LSHFT   &trans        &trans        &trans        &trans          &trans          &trans    &trans     &trans     &trans     &trans  &trans
-                                        &kp LEFT_ALT  &kp LEFT_SHIFT  &trans          &trans    &kp SPACE  &kp ENTER
+&kp TAB     &kp N1        &kp N2        &kp N3        &kp N4        &kp N5          &kp N6         &kp N7     &kp N8     &kp N9     &kp N0  &kp BSPC
+&bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4    &kp LEFT       &kp DOWN   &kp UP     &kp RIGHT  &trans  &trans
+&kp LSHFT   &trans        &trans        &trans        &trans        &trans          &trans         &trans     &trans     &trans     &trans  &trans
+                                        &trans        &trans        &trans          &kp RIGHT_ALT  &kp SPACE  &kp ENTER
             >;
         };
 
@@ -99,10 +114,10 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-&kp TAB    &kp EXCL  &kp AT  &kp HASH      &kp DLLR    &kp PRCNT    &kp CARET  &kp AMPS   &kp ASTRK  &kp LPAR  &kp RPAR  &kp BSPC
-&kp LCTRL  &trans    &trans  &trans        &trans      &trans       &kp MINUS  &kp EQUAL  &kp LBKT   &kp RBKT  &kp BSLH  &kp GRAVE
-&kp LSHFT  &trans    &trans  &trans        &trans      &trans       &kp UNDER  &kp PLUS   &kp LBRC   &kp RBRC  &kp PIPE  &kp TILDE
-                             &kp LEFT_ALT  &kp LSHIFT  &trans       &trans     &kp SPACE  &kp RGUI
+&kp TAB    &kp EXCL  &kp AT  &kp HASH  &kp DLLR  &kp PRCNT    &kp CARET      &kp AMPS   &kp ASTRK  &kp LPAR  &kp RPAR  &kp BSPC
+&kp LCTRL  &trans    &trans  &trans    &trans    &trans       &kp MINUS      &kp EQUAL  &kp LBKT   &kp RBKT  &kp BSLH  &kp GRAVE
+&kp LSHFT  &trans    &trans  &trans    &trans    &trans       &kp UNDER      &kp PLUS   &kp LBRC   &kp RBRC  &kp PIPE  &kp TILDE
+                             &trans    &trans    &trans       &kp RIGHT_ALT  &kp SPACE  &kp ENTER
             >;
         };
 
