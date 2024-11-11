@@ -56,6 +56,16 @@
             bindings = <&kp RS(RC(RIGHT_CONTROL))>;
             key-positions = <16 14>;
         };
+
+        copy {
+            bindings = <&kp LC(C)>;
+            key-positions = <14 15 16>;
+        };
+
+        paste {
+            bindings = <&kp LC(V)>;
+            key-positions = <19 20 21>;
+        };
     };
 
     behaviors {
