@@ -85,6 +85,13 @@
             bindings = <&kp COLON &kp COLON>;
             label = "DOUBLE_COLON_MACRO";
         };
+
+        arrow_function: arrow_function {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LPAR &kp RPAR &kp SPACE &kp EQUAL &kp GT &kp SPACE &kp LEFT_BRACE &kp RET &kp RET &kp RBRC &kp UP_ARROW &kp TAB>;
+            label = "ARROW_FUNCTION";
+        };
     };
 
     keymap {
@@ -128,9 +135,9 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-&kp TAB  &kp SQT          &kp LESS_THAN  &kp GREATER_THAN  &kp DOUBLE_QUOTES  &kp GRAVE         &kp AMPERSAND  &double_colon_macro  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp PERCENT   &kp BSPC
-&trans   &kp EXCLAMATION  &kp MINUS      &kp PLUS          &kp EQUAL          &kp HASH          &kp PIPE       &kp COLON            &kp LBKT              &kp RBKT               &kp QUESTION  &kp ENTER
-&trans   &kp CARET        &kp SLASH      &kp ASTERISK      &kp BACKSLASH      &kp UNDERSCORE    &kp TILDE      &kp DOLLAR           &kp LBRC              &kp RBRC               &kp AT_SIGN   &trans
+&kp TAB  &kp SQT          &kp LESS_THAN  &kp GREATER_THAN  &kp DOUBLE_QUOTES  &kp GRAVE         &kp AMPERSAND  &double_colon_macro  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp PERCENT      &kp BSPC
+&trans   &kp EXCLAMATION  &kp MINUS      &kp PLUS          &kp EQUAL          &kp HASH          &kp PIPE       &kp COLON            &kp LBKT              &kp RBKT               &arrow_function  &kp ENTER
+&trans   &kp CARET        &kp SLASH      &kp ASTERISK      &kp BACKSLASH      &kp UNDERSCORE    &kp TILDE      &kp DOLLAR           &kp LBRC              &kp RBRC               &kp AT_SIGN      &trans
                                          &trans            &trans             &trans            &kp RIGHT_ALT  &kp SPACE            &trans
             >;
         };
