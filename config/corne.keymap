@@ -25,11 +25,13 @@
         left-shift {
             bindings = <&kp LSHFT>;
             key-positions = <16 15>;
+            layers = <0>;
         };
 
         left-control {
             bindings = <&kp LEFT_CONTROL>;
             key-positions = <15 14>;
+            layers = <1>;
         };
 
         right-control {
@@ -45,6 +47,7 @@
         ctrl-shift-left {
             bindings = <&kp RS(RC(RIGHT_CONTROL))>;
             key-positions = <16 14>;
+            layers = <0>;
         };
 
         minecraft-layer {
