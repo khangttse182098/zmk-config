@@ -31,7 +31,7 @@
         left-control {
             bindings = <&kp LEFT_CONTROL>;
             key-positions = <15 14>;
-            layers = <1>;
+            layers = <0>;
         };
 
         right-control {
