@@ -50,9 +50,28 @@
             layers = <0>;
         };
 
-        minecraft-layer {
-            bindings = <&tog 4>;
+        space {
+            bindings = <&kp SPACE>;
+            key-positions = <16 15>;
+            layers = <2>;
+        };
+
+        caplocks {
+            bindings = <&kp CAPS>;
             key-positions = <36 41>;
+            layers = <0>;
+        };
+
+        left-alt {
+            bindings = <&kp LEFT_ALT>;
+            key-positions = <15 14>;
+            layers = <2>;
+        };
+
+        switch-undertale-layer {
+            bindings = <&tog 5>;
+            key-positions = <24 35>;
+            layers = <0>;
         };
     };
 
@@ -97,7 +116,7 @@
         arrow_function: arrow_function {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LPAR &kp RPAR &kp SPACE &kp EQUAL &kp GT &kp SPACE &kp LEFT_BRACE &kp RET &kp RET &kp RBRC &kp UP_ARROW &kp TAB>;
+            bindings = <&kp LPAR &kp RPAR &kp SPACE &kp EQUAL &kp GT &kp SPACE &kp LEFT_BRACE &kp LEFT &kp TAB &kp ENTER>;
             label = "ARROW_FUNCTION";
         };
     };
@@ -159,21 +178,21 @@
             >;
         };
 
-        minecraft {
-            bindings = <
-&kp ESCAPE      &kp Q  &kp W  &kp E   &kp R      &kp T    &kp Y          &kp U      &kp I      &kp O    &kp P          &kp BSPC
-&kp LEFT_SHIFT  &kp A  &kp S  &kp D   &kp F      &kp G    &kp H          &kp J      &kp K      &kp L    &kp SEMICOLON  &kp ENTER
-&trans          &kp Z  &kp X  &kp C   &kp V      &kp B    &kp N          &kp M      &kp COMMA  &kp DOT  &kp FSLH       &kp RGUI
-                              &trans  &kp SPACE  &mo 5    &kp RIGHT_ALT  &kp SPACE  &trans
-            >;
-        };
-
         left-number-layer {
             bindings = <
 &trans  &kp NUMBER_6  &kp NUMBER_7  &kp NUMBER_8  &kp N9        &trans    &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4  &kp N5    &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans        &trans        &trans        &trans        &trans    &trans  &trans  &trans  &trans  &trans  &trans
                                     &trans        &trans        &trans    &trans  &trans  &trans
+            >;
+        };
+
+        undertale-layout {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans    &kp UP_ARROW  &trans     &trans  &trans
+&trans  &kp Z   &kp X   &kp C   &kp V   &trans    &trans  &kp LEFT  &kp DOWN      &kp RIGHT  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans    &trans        &trans     &trans  &trans
+                        &trans  &trans  &trans    &trans  &trans    &trans
             >;
         };
     };
