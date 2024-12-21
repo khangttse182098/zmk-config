@@ -73,6 +73,12 @@
             key-positions = <24 35>;
             layers = <0 5>;
         };
+
+        krunker-layer {
+            bindings = <&tog 6>;
+            key-positions = <12 23>;
+            layers = <0 6>;
+        };
     };
 
     behaviors {
@@ -116,7 +122,7 @@
         arrow_function: arrow_function {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LPAR &kp RPAR &kp SPACE &kp EQUAL &kp GT &kp SPACE &kp LEFT_BRACE &kp LEFT &kp TAB &kp ENTER>;
+            bindings = <&kp LPAR &kp RPAR &kp SPACE &kp EQUAL &kp GT &kp SPACE &kp LEFT_BRACE &kp ENTER>;
             label = "ARROW_FUNCTION";
         };
     };
@@ -193,6 +199,15 @@
 &trans  &kp Z   &kp X   &kp C   &kp V   &trans    &trans  &kp LEFT  &kp DOWN      &kp RIGHT  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans    &trans        &trans     &trans  &trans
                         &trans  &trans  &trans    &trans  &trans    &trans
+            >;
+        };
+
+        krunker {
+            bindings = <
+&kp ESCAPE      &kp Q  &kp W  &kp E   &kp R      &kp T     &kp Y          &kp U      &kp I      &kp O    &kp P          &kp BSPC
+&trans          &kp A  &kp S  &kp D   &kp F      &kp G     &kp H          &kp J      &kp K      &kp L    &kp SEMICOLON  &kp ENTER
+&kp LEFT_SHIFT  &kp Z  &kp X  &kp C   &kp V      &kp B     &kp N          &kp M      &kp COMMA  &kp DOT  &kp FSLH       &kp RGUI
+                              &trans  &kp SPACE  &trans    &kp RIGHT_ALT  &kp SPACE  &trans
             >;
         };
     };
