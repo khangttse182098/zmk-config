@@ -79,6 +79,11 @@
             key-positions = <12 23>;
             layers = <0 6>;
         };
+
+        shut-down-window {
+            bindings = <&shut_down_window>;
+            key-positions = <36 37 38 39 40>;
+        };
     };
 
     behaviors {
@@ -125,6 +130,13 @@
             bindings = <&kp LPAR &kp RPAR &kp SPACE &kp EQUAL &kp GT &kp SPACE &kp LEFT_BRACE &kp ENTER>;
             label = "ARROW_FUNCTION";
         };
+
+        shut_down_window: shut_down_window {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp RG(X) &kp U &kp U>;
+            label = "SHUT_DOWN_WINDOW";
+        };
     };
 
     keymap {
@@ -153,10 +165,10 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-&trans      &trans        &trans        &trans        &trans        &trans          &trans         &kp N7        &kp N8        &kp N9        &kp N0  &kp BSPC
-&bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4    &trans         &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &trans  &trans
-&trans      &trans        &trans        &trans        &trans        &trans          &trans         &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &trans  &trans
-                                        &trans        &trans        &trans          &kp RIGHT_ALT  &kp SPACE     &kp ENTER
+&trans      &trans        &trans        &trans        &trans        &trans          &trans  &kp N7        &kp N8        &kp N9        &kp N0  &kp BSPC
+&bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4    &trans  &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &trans  &trans
+&trans      &trans        &trans        &trans        &trans        &trans          &trans  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &trans  &trans
+                                        &trans        &trans        &trans          &mo 7   &kp SPACE     &kp ENTER
             >;
         };
 
@@ -208,6 +220,15 @@
 &trans          &kp A  &kp S  &kp D   &kp F      &kp G     &kp H          &kp J      &kp K      &kp L    &kp SEMICOLON  &kp ENTER
 &kp LEFT_SHIFT  &kp Z  &kp X  &kp C   &kp V      &kp B     &kp N          &kp M      &kp COMMA  &kp DOT  &kp FSLH       &kp RGUI
                               &trans  &kp SPACE  &trans    &kp RIGHT_ALT  &kp SPACE  &trans
+            >;
+        };
+
+        function-layer {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &kp F7  &kp F8  &kp F9  &kp F10  &kp F11
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &kp F4  &kp F5  &kp F6  &kp F12  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &kp F1  &kp F2  &kp F3  &trans   &trans
+                        &trans  &trans  &trans    &trans  &trans  &trans
             >;
         };
     };
