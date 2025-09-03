@@ -231,10 +231,10 @@
 
         controls {
             bindings = <
-&trans  &trans  &trans     &trans     &trans     &trans    &trans          &trans    &trans        &trans           &trans  &trans
-&trans  &trans  &kp RC(X)  &kp RC(V)  &kp RC(C)  &trans    &kp LEFT_ARROW  &kp DOWN  &kp UP_ARROW  &kp RIGHT_ARROW  &trans  &trans
-&trans  &trans  &trans     &trans     &trans     &trans    &trans          &trans    &trans        &trans           &trans  &trans
-                           &trans     &trans     &trans    &trans          &trans    &trans
+&trans  &trans      &trans     &trans     &trans     &trans    &trans          &finnish_u  &trans        &finnish_o       &trans  &trans
+&trans  &finnish_a  &kp RC(X)  &kp RC(V)  &kp RC(C)  &trans    &kp LEFT_ARROW  &kp DOWN    &kp UP_ARROW  &kp RIGHT_ARROW  &trans  &trans
+&trans  &trans      &trans     &trans     &trans     &trans    &trans          &trans      &trans        &trans           &trans  &trans
+                               &trans     &trans     &trans    &trans          &trans      &trans
             >;
         };
 
