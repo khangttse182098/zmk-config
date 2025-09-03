@@ -84,6 +84,18 @@
             bindings = <&shut_down_window>;
             key-positions = <36 37 38 39 40>;
         };
+
+        finnish-captialzie-right {
+            bindings = <&mo 6>;
+            key-positions = <19 20>;
+            layers = <3>;
+        };
+
+        finnish-captialize-left {
+            bindings = <&mo 6>;
+            key-positions = <16 15>;
+            layers = <3>;
+        };
     };
 
     behaviors {
