@@ -150,46 +150,46 @@
             label = "SHUT_DOWN_WINDOW";
         };
 
-        finnish_a: finnish_a {
+        finnish_a_low: finnish_a_low {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&kp LEFT_WIN &kp DQT &kp A>;
-            label = "FINNISH_A";
+            label = "FINNISH_A_LOW";
         };
 
-        finnish_u: new_macro {
+        finnish_u_low: finnish_u_low {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&kp LEFT_WIN &kp DQT &kp U>;
-            label = "NEW_MACRO";
+            label = "FINNISH_U_LOW";
         };
 
-        finnish_o: new_macro {
+        finnish_o_low: finnish_o_low {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&kp LEFT_WIN &kp DQT &kp O>;
-            label = "NEW_MACRO";
+            label = "FINNISH_O_LOW";
         };
 
-        finnish_A: finnish_A {
+        finnish_a_up: finnish_a_up {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&kp LEFT_WIN &kp DQT &kp LS(A)>;
-            label = "FINNISH_A";
+            label = "FINNISH_A_UP";
         };
 
-        finnish_U: finnish_U {
+        finnish_u_up: finnish_u_up {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&kp LEFT_WIN &kp DQT &kp LS(U)>;
-            label = "FINNISH_U";
+            label = "FINNISH_U_UP";
         };
 
-        finnish_O: finnish_O {
+        finnish_o_up: finnish_o_up {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&kp LEFT_WIN &kp DQT &kp LS(O)>;
-            label = "FINNISH_O";
+            label = "FINNISH_O_UP";
         };
     };
 
@@ -243,10 +243,10 @@
 
         controls {
             bindings = <
-&trans  &trans      &trans     &trans     &trans     &trans    &trans          &finnish_u  &trans        &finnish_o       &trans  &trans
-&trans  &finnish_a  &kp RC(X)  &kp RC(V)  &kp RC(C)  &trans    &kp LEFT_ARROW  &kp DOWN    &kp UP_ARROW  &kp RIGHT_ARROW  &trans  &trans
-&trans  &trans      &trans     &trans     &trans     &trans    &trans          &trans      &trans        &trans           &trans  &trans
-                               &trans     &trans     &trans    &trans          &trans      &trans
+&trans  &trans          &trans     &trans     &trans     &trans    &trans          &finnish_u_low  &trans        &finnish_o_low   &trans  &trans
+&trans  &finnish_a_low  &kp RC(X)  &kp RC(V)  &kp RC(C)  &trans    &kp LEFT_ARROW  &kp DOWN        &kp UP_ARROW  &kp RIGHT_ARROW  &trans  &trans
+&trans  &trans          &trans     &trans     &trans     &trans    &trans          &trans          &trans        &trans           &trans  &trans
+                                   &trans     &trans     &trans    &trans          &trans          &trans
             >;
         };
 
@@ -270,10 +270,10 @@
 
         finnish-layer {
             bindings = <
-&trans  &trans      &trans  &trans  &trans  &trans    &trans  &finnish_U  &trans  &finnish_O  &trans  &trans
-&trans  &finnish_A  &trans  &trans  &trans  &trans    &trans  &trans      &trans  &trans      &trans  &trans
-&trans  &trans      &trans  &trans  &trans  &trans    &trans  &trans      &trans  &trans      &trans  &trans
-                            &trans  &trans  &trans    &trans  &trans      &trans
+&trans  &trans         &trans  &trans  &trans  &trans    &trans  &finnish_u_up  &trans  &finnish_o_up  &trans  &trans
+&trans  &finnish_a_up  &trans  &trans  &trans  &trans    &trans  &trans         &trans  &trans         &trans  &trans
+&trans  &trans         &trans  &trans  &trans  &trans    &trans  &trans         &trans  &trans         &trans  &trans
+                               &trans  &trans  &trans    &trans  &trans         &trans
             >;
         };
     };
