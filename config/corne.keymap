@@ -69,15 +69,15 @@
         };
 
         switch-undertale-layer {
-            bindings = <&tog 5>;
+            bindings = <&tog 0>;
             key-positions = <24 35>;
-            layers = <0 5>;
+            layers = <0>;
         };
 
         krunker-layer {
-            bindings = <&tog 6>;
+            bindings = <&tog 4>;
             key-positions = <12 23>;
-            layers = <0 6>;
+            layers = <0 4>;
         };
 
         shut-down-window {
@@ -168,7 +168,7 @@
 &trans      &trans        &trans        &trans        &trans        &trans          &trans  &kp N7        &kp N8        &kp N9        &kp N0  &kp BSPC
 &bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4    &trans  &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &trans  &trans
 &trans      &trans        &trans        &trans        &trans        &trans          &trans  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &trans  &trans
-                                        &trans        &trans        &trans          &mo 7   &kp SPACE     &kp ENTER
+                                        &trans        &trans        &trans          &mo 5   &kp SPACE     &kp ENTER
             >;
         };
 
@@ -193,24 +193,6 @@
 &trans  &trans  &kp RC(X)  &kp RC(V)  &kp RC(C)  &trans    &kp LEFT_ARROW  &kp DOWN  &kp UP_ARROW  &kp RIGHT_ARROW  &trans  &trans
 &trans  &trans  &trans     &trans     &trans     &trans    &trans          &trans    &trans        &trans           &trans  &trans
                            &trans     &trans     &trans    &trans          &trans    &trans
-            >;
-        };
-
-        left-number-layer {
-            bindings = <
-&trans  &kp NUMBER_6  &kp NUMBER_7  &kp NUMBER_8  &kp N9        &trans    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4  &kp N5    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans        &trans        &trans        &trans        &trans    &trans  &trans  &trans  &trans  &trans  &trans
-                                    &trans        &trans        &trans    &trans  &trans  &trans
-            >;
-        };
-
-        undertale-layout {
-            bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans    &kp UP_ARROW  &trans     &trans  &trans
-&trans  &kp Z   &kp X   &kp C   &kp V   &trans    &trans  &kp LEFT  &kp DOWN      &kp RIGHT  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans    &trans        &trans     &trans  &trans
-                        &trans  &trans  &trans    &trans  &trans    &trans
             >;
         };
 
