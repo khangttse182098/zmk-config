@@ -137,6 +137,48 @@
             bindings = <&kp RG(X) &kp U &kp U>;
             label = "SHUT_DOWN_WINDOW";
         };
+
+        finnish_a: finnish_a {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LEFT_WIN &kp DQT &kp A>;
+            label = "FINNISH_A";
+        };
+
+        finnish_u: new_macro {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LEFT_WIN &kp DQT &kp U>;
+            label = "NEW_MACRO";
+        };
+
+        finnish_o: new_macro {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LEFT_WIN &kp DQT &kp O>;
+            label = "NEW_MACRO";
+        };
+
+        finnish_A: finnish_A {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LEFT_WIN &kp DQT &kp LS(A)>;
+            label = "FINNISH_A";
+        };
+
+        finnish_U: finnish_U {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LEFT_WIN &kp DQT &kp LS(U)>;
+            label = "FINNISH_U";
+        };
+
+        finnish_O: finnish_O {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LEFT_WIN &kp DQT &kp LS(O)>;
+            label = "FINNISH_O";
+        };
     };
 
     keymap {
