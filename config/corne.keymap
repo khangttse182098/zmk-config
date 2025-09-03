@@ -255,5 +255,14 @@
                         &trans                &trans           &trans        &trans  &trans  &trans
             >;
         };
+
+        finnish-layer {
+            bindings = <
+&trans  &trans      &trans  &trans  &trans  &trans    &trans  &finnish_U  &trans  &finnish_O  &trans  &trans
+&trans  &finnish_A  &trans  &trans  &trans  &trans    &trans  &trans      &trans  &trans      &trans  &trans
+&trans  &trans      &trans  &trans  &trans  &trans    &trans  &trans      &trans  &trans      &trans  &trans
+                            &trans  &trans  &trans    &trans  &trans      &trans
+            >;
+        };
     };
 };
