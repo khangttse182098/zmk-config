@@ -17,7 +17,7 @@
         compatible = "zmk,combos";
 
         powertoy-search {
-            bindings = <&kp LA(SPACE)>;
+            bindings = <&kp LG(SPACE)>;
             key-positions = <39 38>;
         };
 
