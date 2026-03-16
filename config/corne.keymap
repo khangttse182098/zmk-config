@@ -102,7 +102,7 @@
         };
 
         steno-switch {
-            bindings = <&tog 0>;
+            bindings = <&tog 9>;
             key-positions = <25 34>;
             layers = <0>;
         };
