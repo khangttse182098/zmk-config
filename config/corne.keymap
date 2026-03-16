@@ -17,7 +17,7 @@
         compatible = "zmk,combos";
 
         powertoy-search {
-            bindings = <&kp LG(SPACE)>;
+            bindings = <&kp LA(SPACE)>;
             key-positions = <39 38>;
         };
 
@@ -102,9 +102,9 @@
         };
 
         steno-switch {
-            bindings = <&tog 9>;
+            bindings = <&tog 0>;
             key-positions = <25 34>;
-            layers = <0 9>;
+            layers = <0>;
         };
     };
 
@@ -307,9 +307,9 @@
 
         steno {
             bindings = <
-&kp DEL  &kp Q   &kp W   &kp E   &kp R   &kp T     &kp Y   &kp U   &kp I   &kp O   &kp P     &kp LBKT
-&trans   &kp A   &kp S   &kp D   &kp F   &kp G     &kp H   &kp J   &kp K   &kp L   &kp SEMI  &kp SQT
-&trans   &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans    &trans
+&trans  &kp DEL  &kp Q   &kp W   &kp E   &kp R     &kp Y   &kp U   &kp I   &kp O   &kp P     &kp LBKT
+&trans  &trans   &kp A   &kp S   &kp D   &kp F     &kp H   &kp J   &kp K   &kp L   &kp SEMI  &kp SQT
+&trans  &trans   &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans    &trans
                          &kp C   &kp V   &trans    &trans  &kp N   &kp M
             >;
         };
